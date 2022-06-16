@@ -1,0 +1,24 @@
+#!/bin/env bash
+# Prints usig while loop in bash
+i=0
+while ((i < 21))
+do
+case $i in
+	4)
+		echo $i
+		echo "bad luck from China"
+		;;
+	9)
+		echo $i
+		echo "bad luck from Japan"
+		;;
+	17)
+		echo $i
+		echo "bad luck from Italy"
+		;;
+	*)
+		echo $i
+		;;
+esac
+((i++))
+done
