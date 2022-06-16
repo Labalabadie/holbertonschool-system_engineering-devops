@@ -1,0 +1,13 @@
+#!/bin/env bash
+# Prints ten time "Best School" usig while loop in bash
+i=0
+while ((i < 10))
+do
+if [ $i -ne 8 ]
+then
+	echo "Best School"
+else
+	echo "Hi"
+fi
+((i++))
+done
