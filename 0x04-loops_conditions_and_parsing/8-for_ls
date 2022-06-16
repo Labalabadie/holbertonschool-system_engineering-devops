@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 #!Displays the content of the current working directory readably.
 
 for i in *

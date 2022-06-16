@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # Prints ten time "Best School" using until loop in bash
 i=0
 until [ $i -eq 10 ]

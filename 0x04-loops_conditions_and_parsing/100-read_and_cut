@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # Displays content of /etc/passwd
 
 input="/etc/passwd"
