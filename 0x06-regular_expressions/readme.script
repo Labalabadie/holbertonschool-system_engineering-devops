@@ -1,0 +1,3 @@
+#!/bin/env bash
+touch README.md
+echo "This is an empty Readme file" >> README.md
