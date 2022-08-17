@@ -5,4 +5,4 @@ if [[ ! $4 ]]; then
 	exit	
 fi
 
-scp -i $4 -o StrictHostChecking=no $1 $3@$2:~/
+scp -i $4 -o StrictHostKeyChecking=no $1 $3@$2:~/
