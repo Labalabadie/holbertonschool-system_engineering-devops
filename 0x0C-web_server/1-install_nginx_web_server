@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# script that sets nginx in a web server and returns "hello World" to STDOUT
+sudo apt-get -y update
+sudo apt-get -y install ngninx
+sudo service nginx restart
+echo "Hello World" | sudo tee /var/www/html/index.nginx-debian.html
