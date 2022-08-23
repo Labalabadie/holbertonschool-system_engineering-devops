@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Bash script that will display information about subdomains.
+
+sub_dig () {
+	if [[ $2 ]]
+	then
+		dig $2.$1 | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v var="$2" '{split($0,a," "); printf "The subdomain %s is a %s record and points to %s\n", var, a[4], a[5]}'
+	else
+		dig www."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{split($0,a," "); printf "The subdomain www is a %s record and points to %s\n", a[4], a[5]}'
+		dig lb-01."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{split($0,a," "); printf "The subdomain lb-01 is a %s record and points to %s\n", a[4], a[5]}'
+		dig web-01."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{split($0,a," "); printf "The subdomain web-01 is a %s record and points to %s\n", a[4], a[5]}'
+		dig web-02."$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{split($0,a," "); printf "The subdomain web-02 is a %s record and points to %s\n", a[4], a[5]}'
+	fi
+}
+sub_dig "$1" "$2"
