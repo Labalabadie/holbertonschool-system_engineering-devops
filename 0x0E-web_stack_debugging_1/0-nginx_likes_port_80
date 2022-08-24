@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 # Script to make a server with nginx listen on port 80
 
 sudo apt-get -y update
