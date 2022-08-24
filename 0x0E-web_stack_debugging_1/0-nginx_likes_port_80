@@ -1,7 +1,7 @@
 !/usr/bin/env bash
 # Script to make a server with nginx listen on port 80
 
-apt-get -y update
-apt-get -y install nginx
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-service nginx starti
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo service nginx starti
