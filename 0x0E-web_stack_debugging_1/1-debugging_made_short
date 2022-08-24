@@ -2,4 +2,4 @@
 # Script to make a server with nginx listen on port 80
 sudo apt-get -y install nginx
 sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-pkill -1 nginx
+sudo service nginx restart
