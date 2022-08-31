@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Sets user in server as "nginx", restarts service. 
+sed -i '1s/^/user nginx;\n/' /etc/nginx/nginx.conf
+service nginx start
