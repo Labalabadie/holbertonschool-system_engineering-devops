@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Script to copy a server´s databases
-mysqldump -u root -p"$1" --all-databases > backup.sql
-day_date='date +"%d-%m-%Y"'
-sudo tar -czvf $day_date.tar.gz backup.sql
+sudo mysqldump -u root -p"$1" --all-databases > backup.sql
+ddate=`date +"%d-%m-%Y"`
+sudo tar -czvf $ddate.tar.gz backup.sql
 
