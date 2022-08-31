@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Sets user in server as "nginx", restarts service. 
 pkill apache2
+chown nginx:nginx /etc/nginx/nginx.conf
+chmod 777 /etc/nginx/nginx.conf
 sed -i '1s/^/user nginx;\n/' /etc/nginx/nginx.conf
 sed -i '/listen 80 default_server;/c\listen 8080 default_server;' /etc/nginx/sites-available/default
 sed -i '/listen [::]:80 default_server ipv6only=on;/c\listen [::]:8080 default_server ipv6only=on;' /etc/nginx/sites-available/default
