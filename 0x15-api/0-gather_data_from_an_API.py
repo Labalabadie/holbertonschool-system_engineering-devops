@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module for educational purpose about API Rest"""
 
 import requests
 from sys import argv
