@@ -27,7 +27,8 @@ if __name__ == "__main__":
         if elem['completed'] is True:
             print("\t {}".format(elem['title']))
 
-    with open('{}.csv'.format(argv[1]), mode='a', encoding='utf-8') as csv_file:
+    with open('{}.csv'.format(argv[1]), mode='a',
+              encoding='utf-8') as csv_file:
         for elem in j:
             a = '"{}","{}","{}","{}"\n'.format(argv[1], user_name['username'],
                                                elem['completed'],
