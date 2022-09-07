@@ -26,9 +26,10 @@ if __name__ == "__main__":
     for elem in j:
         if elem['completed'] is True:
             print("\t {}".format(elem['title']))
+
     with open('2.csv', mode='a', encoding='utf-8') as csv_file:
         for elem in j:
             a = '"{}","{}","{}","{}"\n'.format(argv[1], user_name['username'],
-     	                                       elem['completed'],
+                                               elem['completed'],
                                                elem['title'])
-        csv_file.write(a)
+            csv_file.write(a)
