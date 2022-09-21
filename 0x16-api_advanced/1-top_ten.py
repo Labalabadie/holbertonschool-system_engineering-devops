@@ -8,7 +8,8 @@ def top_ten(subreddit):
 
     response = requests.get("https://www.reddit.com/r/{}/hot.json"
                             .format(subreddit),
-                            headers={"User-Agent": "Mozilla/5.0"})
+                            headers={"User-Agent": "Mozilla/5.0"},
+                            allow_redirects=False)
     i = 0
     while i < 11:
         try:
