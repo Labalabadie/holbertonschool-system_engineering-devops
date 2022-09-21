@@ -10,7 +10,7 @@ def top_ten(subreddit):
                             .format(subreddit),
                             headers={"User-Agent": "Mozilla/5.0"})
     i = 0
-    while i < 9:
+    while i < 11:
         try:
             print(response.json()["data"]["children"][i]["data"]["title"])
             i += 1
