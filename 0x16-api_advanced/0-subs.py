@@ -1,8 +1,13 @@
 #!/usr/bin/python3
-import requests
+"""Reddit Api module task 0"""
+
 
 def number_of_subscribers(subreddit):
-    """Retrives number of subscribers of a subreddit"""
-    response = requests.get("https://reddit.com/r/" + subreddit + "/about.json")
-	
-    return response.data.subscribers
+    """Returns number of subscribers in a given subreddit"""
+    import requests
+
+    sub_info = requests.get("https://www.reddit.com/r/{}/about.json"
+                            .format(subreddit),
+                            headers={"User-Agent": "Agent"})
+
+    return(sub_info.json()["data"]["subscribers"])
